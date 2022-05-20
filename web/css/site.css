@@ -1,0 +1,152 @@
+/* Variables */
+
+:root {
+    --black: #000000;
+    --grey: #666666;
+    --light: #f8f8f8;
+    --red: #ff0000;
+}
+
+/* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Page */
+
+.page-body {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    height: 100%;
+    margin: 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.page-header__link {
+    font-weight: bold;
+    color: var(--black);
+
+    transition: 0.2s;
+}
+
+.page-header__link:hover {
+    color: var(--grey);
+}
+
+.page-header__link:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Main */
+
+.page-main {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
+
+  font-size: 16px;
+
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+}
+
+.form-group .help-block {
+  font-size: 14px;
+  color: var(--red);
+}
+
+.result-caption {
+  margin-bottom: 2px;
+}
+
+.result {
+  min-height: 31px;
+  padding: 5px;
+
+  background-color: var(--light);
+  border: 1px dashed var(--grey);
+}
+
+/* Footer */
+
+.page-footer {
+  padding: 14px;
+
+  font-size: 15px;
+
+  border-top: 1px solid var(--grey);
+}
+
+/* History page */
+
+.history-grid table {
+  width: 100%;
+  margin-bottom: 20px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.history-grid th, td {
+  padding: 5px 10px;
+
+  border: 1px solid var(--grey);
+}
+
+.history-grid .pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.history-grid .pagination li:not(:last-child) {
+  margin-right: 10px;
+}
