@@ -38,7 +38,10 @@ class SiteController extends Controller
                 return;
             }
 
-            $model->shortUrl = UrlService::getRandomString();
+            do {
+                $model->shortUrl = UrlService::getRandomString();
+            } while (UrlRequest::find()->where(['shortUrl' => $model->shortUrl])->exists());
+
             $model->save(false);
             Yii::$app->response->format = Response::FORMAT_JSON;
             return $model;
