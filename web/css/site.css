@@ -23,7 +23,7 @@ p {
   margin: 0;
 }
 
-input {
+input, button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
