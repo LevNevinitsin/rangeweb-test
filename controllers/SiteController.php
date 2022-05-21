@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use app\models\UrlRequest;
-use LevNevinitsin\Service\UrlService;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\helpers\StringHelper;
@@ -40,7 +39,7 @@ class SiteController extends Controller
 
             $model->save(false);
             Yii::$app->response->format = Response::FORMAT_JSON;
-            return $model;
+            return ['shortUrl' => $model->shortUrl];
         }
 
         if ($shortUrl !== '') {
